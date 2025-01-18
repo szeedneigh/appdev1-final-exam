@@ -4,7 +4,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <div className="todo-container">
       <h1>Todo App</h1>
       <TodoProvider>
         <TodoList />

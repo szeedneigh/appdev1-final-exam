@@ -1,7 +1,6 @@
-
 const TodoForm = ({ addTodo, newTodo, setNewTodo }) => {
   return (
-    <div>
+    <div className="todo-form">
       <input
         type="text"
         value={newTodo}
@@ -10,8 +9,10 @@ const TodoForm = ({ addTodo, newTodo, setNewTodo }) => {
       />
       <button
         onClick={() => {
-          addTodo(newTodo);
-          setNewTodo("");
+          if (newTodo.trim()) {
+            addTodo(newTodo);
+            setNewTodo("");
+          }
         }}
       >
         Add Todo

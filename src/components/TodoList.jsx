@@ -9,17 +9,18 @@ const TodoList = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div className="todo-container">
       <TodoForm
         addTodo={addTodo}
         newTodo={newTodo}
         setNewTodo={setNewTodo}
       />
 
-      <ul>
+      <ul className="todo-list">
         {todos.map((todo) => (
-          <li key={todo.id}>
+          <li key={todo.id} className="todo-item">
             <span
+              className="todo-title"
               style={{ textDecoration: todo.completed ? "line-through" : "none", cursor: "pointer" }}
               onClick={() => toggleComplete(todo.id)}
             >
