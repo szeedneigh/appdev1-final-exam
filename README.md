@@ -1,8 +1,33 @@
-# React + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, minimalist Todo application built with React that allows users to manage their tasks. The app fetches initial todos from JSONPlaceholder API and provides basic todo management functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetch and display todos from an external API
+- Add new todos
+- Delete existing todos
+- Toggle todo completion status using strikethrough
+- Minimalist and responsive design
+- Loading state handling
+
+## Technologies Used
+
+- React
+- Context API for state management
+- CSS for styling
+- JSONPlaceholder API for initial todos
+
+## Features Implementation
+
+- **TodoContext**: Manages the application state and provides todo-related operations
+- **TodoList**: Displays the list of todos and handles todo interactions
+- **TodoForm**: Handles the creation of new todos
+- **Styling**: Minimal and clean design with CSS
+
+## API Integration
+
+The app uses JSONPlaceholder API to fetch initial todos:
+- Endpoint: `https://jsonplaceholder.typicode.com/todos`
+- Fetches first 10 todos
+- Implements error handling for failed API requests
